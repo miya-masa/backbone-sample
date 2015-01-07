@@ -17,9 +17,4 @@
  *
  */
 'use strict';
-var jQuery = require('jquery');
-window.jQuery = window.$ = jQuery;
-var bootstrap = require('bootstrap');
-var Backbone = require('backbone');
-Backbone.$ = $;
-Backbone.localStorage = require('backbone.localstorage');
+var TodoApp = require('./view/todo-app.js');

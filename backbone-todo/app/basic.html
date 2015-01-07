@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 </head>
 
-<body>
+<body id="main">
     <div class="container">
         <h1>TodoList <small>Backbone.js</small></h1>
     </div>
@@ -45,7 +45,17 @@
                             <th>削除</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <script type="text/template" charset="utf-8" id="tmpl-todo-item" <`2`>>
+                        <tr id="todo-item">
+                            <td>1</td>
+                            <td>task</td>
+                            <td>しめきり</td>
+                            <td>
+                                <button type="button" class="btn btn-danger">削除</button>
+                            </td>
+                        </tr>
+                    </script>
+                    <tbody id="todo-list">
                         <tr>
                             <td>1</td>
                             <td>task</td>
@@ -65,7 +75,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-4">
+            <div id="todo-form" class="col-md-4">
                 <form>
                     <div class="form-group">
                         <label for="exampleInputEmail1">締め切り</label>
