@@ -37,7 +37,7 @@ var b = browserify({
     packageCache: {},
     fullPaths: true,
     debug: true,
-    entries: './app/scripts/main.js'
+    entries: 'app/scripts/main.js'
 });
 var bundler = watchify(b);
 // add any other browserify options or transforms here
@@ -58,7 +58,7 @@ function bundle() {
         })) // loads map from browserify file
         .pipe($.sourcemaps.write()) // writes .map file
         //
-        .pipe(gulp.dest('./app/bundled'));
+        .pipe(gulp.dest('app/bundled'));
 }
 
 var AUTOPREFIXER_BROWSERS = [
